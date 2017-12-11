@@ -53,7 +53,7 @@ public class cheesewing extends AppCompatActivity {
 
                 db.insert(newOrder);
 
-                Intent goTO = new Intent(cheesewing.this, MainActivity.class);
+                Intent goTO = new Intent(cheesewing.this, Menu2.class);
 
                 startActivity(goTO);
             }

@@ -2,14 +2,12 @@ package com.example.liangminglin.menu2;
 
 import android.app.AlertDialog;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
 import android.widget.TextView;
-import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 
 
@@ -145,7 +143,7 @@ public class Payment extends AppCompatActivity {
                 builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent payment= new Intent(Payment.this, MainActivity.class);
+                        Intent payment= new Intent(Payment.this, Menu2.class);
                         db.deleteData();
                         startActivity(payment);
                     }

@@ -53,7 +53,7 @@ public class garlicwings extends AppCompatActivity {
 
                 db.insert(newOrder);
 
-                Intent goTO = new Intent(garlicwings.this, MainActivity.class);
+                Intent goTO = new Intent(garlicwings.this, Menu2.class);
 
                 startActivity(goTO);
             }

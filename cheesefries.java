@@ -53,7 +53,7 @@ public class cheesefries extends AppCompatActivity {
 
                 db.insert(newOrder);
 
-                Intent goTO = new Intent(cheesefries.this, MainActivity.class);
+                Intent goTO = new Intent(cheesefries.this, Menu2.class);
 
                 startActivity(goTO);
             }

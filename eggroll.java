@@ -1,15 +1,17 @@
-package com.example.liangminglin.menu2;
+package com.example.liangminglin.mytab;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.view.*;
 import android.widget.TextView;
+import android.widget.*;
+import android.content.Intent;
 
-public class curlyfries extends AppCompatActivity {
+
+public class eggroll extends AppCompatActivity {
+
     //constant price
-    final double priceAmount = 1.99;
+    final double priceAmount = 19.99;
 
     //create order
     TextView numorder;
@@ -23,7 +25,7 @@ public class curlyfries extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_curlyfries);
+        setContentView(R.layout.activity_eggroll);
 
         //get the textbox
         numorder = (TextView) findViewById(R.id.order);
@@ -46,13 +48,13 @@ public class curlyfries extends AppCompatActivity {
 
                 order newOrder = new order();
 
-                newOrder.setFoodName("Curly Fries");
+                newOrder.setFoodName("EggRoll");
                 newOrder.setFoodPrice(priceAmount);
                 newOrder.setAmount(count);
 
                 db.insert(newOrder);
 
-                Intent goTO = new Intent(curlyfries.this, Menu2.class);
+                Intent goTO = new Intent(eggroll.this, Menu1.class);
 
                 startActivity(goTO);
             }

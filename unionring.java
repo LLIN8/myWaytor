@@ -53,7 +53,7 @@ public class unionring extends AppCompatActivity {
 
                 db.insert(newOrder);
 
-                Intent goTO = new Intent(unionring.this, MainActivity.class);
+                Intent goTO = new Intent(unionring.this, Menu2.class);
 
                 startActivity(goTO);
             }

@@ -1,4 +1,4 @@
-package com.example.liangminglin.menu2;
+package com.example.liangminglin.mytab;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,23 +7,26 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class curlyfries extends AppCompatActivity {
-    //constant price
-    final double priceAmount = 1.99;
+public class padthai extends AppCompatActivity {
 
-    //create order
+    //constant price
+    final double priceAmount = 599.99;
+
+    //get the textbox
     TextView numorder;
 
-    //create confirm
+
+    //get the confirm button
     Button confirms;
 
     //create db
     DBManager db;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_curlyfries);
+        setContentView(R.layout.activity_padthai);
 
         //get the textbox
         numorder = (TextView) findViewById(R.id.order);
@@ -38,6 +41,7 @@ public class curlyfries extends AppCompatActivity {
 
     }
 
+    //insert into the database
     public void storeOrder()
     {
         confirms.setOnClickListener(new View.OnClickListener() {
@@ -46,13 +50,13 @@ public class curlyfries extends AppCompatActivity {
 
                 order newOrder = new order();
 
-                newOrder.setFoodName("Curly Fries");
+                newOrder.setFoodName("Pad Thai");
                 newOrder.setFoodPrice(priceAmount);
                 newOrder.setAmount(count);
 
                 db.insert(newOrder);
 
-                Intent goTO = new Intent(curlyfries.this, Menu2.class);
+                Intent goTO = new Intent(padthai.this, Menu1.class);
 
                 startActivity(goTO);
             }
@@ -62,13 +66,11 @@ public class curlyfries extends AppCompatActivity {
     //store numbers of orders
     private int count;
 
-
     //increase amount of orders
     public void countOrder(View v)
     {
         count ++;
         numorder.setText(Integer.toString(count));
-
     }
 
     //decrease amount of orders
@@ -78,7 +80,6 @@ public class curlyfries extends AppCompatActivity {
         if(count > 0)
         {
             count--;
-
         }
         numorder.setText(Integer.toString(count));
     }

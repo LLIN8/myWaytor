@@ -53,7 +53,7 @@ public class lemonwings extends AppCompatActivity {
 
                 db.insert(newOrder);
 
-                Intent goTO = new Intent(lemonwings.this, MainActivity.class);
+                Intent goTO = new Intent(lemonwings.this, Menu2.class);
 
                 startActivity(goTO);
             }
